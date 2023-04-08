@@ -1,0 +1,34 @@
+<main class="main">
+  <div class="inner">
+    <% if user_signed_in? %>
+      <div class="greeting">
+        <%= "ログイン中" %>
+      </div> 
+    <% end %>  
+    <div class="top__wrapper">
+      <div class="top__body">
+        <%= link_to image_tag("test.jpg", class: :top), samples_path %>
+      </div>
+
+      <div class="top__body">
+        <%= link_to image_tag("test.jpg", class: :top), samples_path %>
+      </div>
+
+      <div class="top__body">
+        <%= link_to image_tag("test.jpg", class: :top), samples_path %>
+      </div>
+
+      <div class="top__body">
+        <%= link_to image_tag("test.jpg", class: :top), samples_path %>
+      </div>
+
+      <div class="top__body">
+        <%= link_to image_tag("test.jpg", class: :top), samples_path %>
+      </div>
+
+      <div class="top__body">
+        <%= link_to image_tag("test.jpg", class: :top), samples_path %>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marushin-Sample</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/6-2-4.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="inner">
+        <div class="nav">
+          <div class="nav__left">
+            <%= link_to image_tag("marushin.png", class: :logo), root_path %>
+          </div>
+          <% if user_signed_in? %>
+            <div class="nav__right"> 
+              <%= link_to "新しいサンプルの作成", new_sample_path, class: :nav__btn %> 
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
+            </div> 
+          <% else %>  
+            <div class="nav__right">
+              <%= link_to "新規ユーザー登録", new_user_registration_path, class: :nav__btn %> 
+              <%= link_to "ホストの方はこちら", new_user_session_path, class: :nav__btn %>
+              <a href="mailto:info@marushinjapan.co.jp?subject=お問い合わせ" class="nav__btn">お問い合せ</a>
+              <a href="tel:07044168220" class="nav__btn__phone">TEL</a>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </header>
+    <%= yield %>
+    <footer class="footer">
+      <div class="company-info">
+        <div class="nav__bottom">
+          <%= link_to image_tag("marushin.png", class: :logo), root_path %>
+         </div>
+      </div>
+      <div class="info-content">
+        <div class="nav__address">
+          <p class="area__text">東京本社</p>
+          <p class="info">〒103-0004</p>
+          <p class="info">東京都中央区東日本橋1丁目4番13号</p>
+          <p class="info">電話：03-5820-1960</p>
+          <p class="info">FAX：03-5809-2654</p>
+
+         </div>
+         <div class="nav__business">
+            <p class="business">丸信商事のビジネス</p>
+            <div class="occupation">
+               <a href="http://marushinjapan.co.jp/01.html">-アパレル資材部</a>
+            </div> 
+            <div class="occupation">
+              <a href="http://marushinjapan.co.jp/02.html" class="info__business">-ホビー事業部</a>
+            </div> 
+            <div class="occupation">
+              <a href="http://marushinjapan.co.jp/03.html" class="info__business">-アパレル事業部</a>
+            </div> 
+         </div>
+          <div class="nav__company">
+            <p class="company__info__content">企業情報</p>
+            <div class="company__info__footer">
+              <a href="http://marushinjapan.co.jp/">企業HP</a>
+            </div>  
+            <div class="company__info__footer">
+              <a href="http://marushinjapan.co.jp/04.html">会社情報</a>
+            </div>  
+            <div class="company__info__footer">
+              <a href="mailto:info@marushinjapan.co.jp?subject=お問い合わせ">お問い合せ</a>
+            </div>  
+            <div class="company__info__footer">
+              <a href="tel:07044168220" class="nav__btn__footer__phone">📞 03-5820-1960</a>
+            </div>  
+          </div>
+       </div>  
+
+      <p class="copyright">Copyright © PROTO SPACE All rights reserved.</p>
+    </footer>
+  </body>
+</html>

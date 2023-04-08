@@ -1,0 +1,12 @@
+<main class="main">
+  <div class="inner">
+    <% if user_signed_in? %>
+      <div class="greeting">
+        <%= "ログイン中" %>
+      </div> 
+    <% end %>  
+    <div class="card__wrapper">
+      <%= render partial: 'prototype', locals: {samples: @samples} %>   
+    </div>
+  </div>
+</main>

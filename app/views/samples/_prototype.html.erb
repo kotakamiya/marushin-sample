@@ -1,0 +1,17 @@
+<% @samples.each do |sample| %>  
+  <div class="card">
+    <div class="card-picture">
+      <%= link_to image_tag(sample.image, class: :card__img ), sample_path(sample.id)%>
+    </div>
+    <div class="card__body">
+      <%= link_to sample.name, sample_path(sample.id), method: :get, class: :card__title %>
+      <p class="card__summary">
+        <%= sample.number %>
+      </p>
+      <p class = "sample-price">
+        <%= sample.price %> 円
+      </p>  
+    </div>
+  </div>
+<% end %>    
+

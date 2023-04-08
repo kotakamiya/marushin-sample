@@ -1,0 +1,62 @@
+<%= form_with model:@sample, local: true do |f|%>
+  <div class="field">
+    <%= f.label :name, "商品名" %><br />
+    <%= f.text_field :name, id:"prototype_title" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :number, "商品番号" %><br />
+    <%= f.text_area :number, class: :form__detail, id:"prototype_catch_copy" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price, "金額" %><br />
+    <%= f.text_field :price, class: :form__price, id:"prototype_concept" %> 円
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "サンプル画像" %><br />
+    <%= f.file_field :image, id:"prototype_image" %>
+  </div>
+
+  <div class="field">
+    <div class="weight-bold-text">
+       商品の説明
+    </div>
+    <%= f.text_area :sample_explain, class: :form__text, id:"sample_explain", placeholder:"商品の説明（必須 1,000文字まで）（色、素材、重さ、定価、注意点など）例）★ざっくりとしたルックスの綿/麻シーチング。やや薄手で、ナチュラルでドライな風合いが特徴です。" ,rows:"7" ,maxlength:"1000" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mixed_ratio, "混率" %><br />
+    <%= f.text_area :mixed_ratio, class: :form__mixed, id:"mixed_ratio" %> 
+  </div>
+
+  <div class="field">
+    <%= f.label :width, "幅" %><br />
+    <%= f.text_field :width, class: :form__price, id:"width" %> m
+  </div>
+
+  <div class="field">
+    <%= f.label :length, "長さ" %><br />
+    <%= f.text_field :length, class: :form__price, id:"length" %> m
+  </div>
+
+  <div class="field">
+    <%= f.label :season, "シーズン" %><br />
+    <%= f.text_area :season, class: :form__detail, id:"season" %> 
+  </div>
+
+  <div class="field">
+    <%= f.label :sample_price, "サンプル帳の金額" %><br />
+    <%= f.text_field :sample_price, class: :form__price, id:"sample_price" %> 円
+  </div>
+
+  <div class="field">
+    <%= f.label :shipping_price, "送料" %><br />
+    <%= f.text_field :shipping_price, class: :form__price, id:"shipping_price" %> 円
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>

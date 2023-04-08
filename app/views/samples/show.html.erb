@@ -1,0 +1,62 @@
+<main class="main">
+  <div class="inner">
+    <div class="prototype__wrapper">
+      <% if user_signed_in? && current_user.id == @sample.user_id %>
+        <div class="prototype__manage">
+          <%= link_to "編集する", edit_sample_path(@sample.id), class: :prototype__btn %>
+          <%= link_to "削除する", sample_path(@sample.id), method: :delete,class: :prototype__btn %>
+        </div>
+      <% end %>
+      <span class="sample__image">
+        <%= image_tag @sample.image %>
+      </span>
+      <div class="prototype__body">
+        <p class="prototype__hedding">
+          <%= @sample.name %>
+        </p>
+        <div class="prototype__detail">
+          <p class="detail__title"> <%= @sample.price %> </p>
+        </div>
+        <div class="prototype__detail">
+          <p class="detail__message">
+            <%= @sample.number %>
+          </p>
+        </div>
+      </div>
+      <div class="sample-explain-box">
+        <p class="sample-info">商品説明</p>
+        <span><%= @sample.sample_explain %></span>
+      </div>
+
+      <div class="sample-detail-box">
+        <p class="sample-info">商品詳細</p>
+          <div class="info-value">
+            <span>混率：<%= @sample.mixed_ratio %></span>
+          </div>  
+          <div class="info-value">
+            <span>幅　：<%= @sample.width %></span>
+          </div>  
+          <div class="info-value">
+            <span>長さ：<%= @sample.length %></span>
+          </div>  
+          <div class="info-value">
+            <span>シーズン：<%= @sample.season %></span>
+          </div>
+      </div>
+
+      <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">サンプルの値段</th>
+          <td class="detail-value"><%= @sample.sample_price %>円</td>
+        </tr>
+        <tr>
+          <th class="detail-item">送料</th>
+          <td class="detail-value"><%= @sample.shipping_price %>円</td>
+        </tr>
+      </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+</main>

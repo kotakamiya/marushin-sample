@@ -5,6 +5,7 @@ marushin-sample
 
 # URL
 
+https://marushin-sample.onrender.com
 
 # アプリケーション概要
 サンプル帳をWebで見られるようにすることで、誰でも簡単に生地の情報を知ることができる。

@@ -7,9 +7,9 @@
           <%= link_to "削除する", sample_path(@sample.id), method: :delete,class: :prototype__btn %>
         </div>
       <% end %>
-      <span class="sample__image">
+      <div class="sample__image">
         <%= image_tag @sample.image %>
-      </span>
+      </div>
       <div class="prototype__body">
         <p class="prototype__hedding">
           <%= @sample.name %>

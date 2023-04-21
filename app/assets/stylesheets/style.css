@@ -18,6 +18,8 @@ div {
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
   color: #3b4043;
+  background-color: #e6d2cf;
+
 }
 
 
@@ -40,9 +42,10 @@ a {
 /* ヘッダー */
 
 .header {
-  background-color: white;
-  border-bottom: 1px black solid;
+  background-color: #e6d2cf;
+  border-bottom: 1px #998c8a solid;
   padding: 20px 0px;
+  color: #332f2e;
 }
 
 .inner {
@@ -70,7 +73,7 @@ a {
   
 .nav__btn{
   display: inline-block;
-  padding: 0.5em 1.0em;
+  padding: 0.8em 1.0em;
   margin-right: 20px;
   font-size: 0.8em;
   color: black;
@@ -87,7 +90,7 @@ a {
 
 .nav__btn__phone{
   display: inline-block;
-  padding: 0.4em 1.6em;
+  padding: 0.8em 1.6em;
   font-size: 0.8em;
   color: #3b4043;
   text-decoration: none;
@@ -107,11 +110,11 @@ a {
   padding: 0.5em 1.0em;
   margin-right: 20px;
   font-size: 0.8em;
-  color: black;
+  color: #4d4d4d;
   font-weight: bold;
   text-decoration: none;
   user-select: none;
-  border-bottom: 1px black solid;
+  border-bottom: 1px #4d4d4d solid;
   transition: 0.4s ;
 }
 
@@ -126,7 +129,7 @@ a {
   font-size: 0.8em;
   color: #3b4043;
   text-decoration: none;
-  border-bottom: 1px black solid;
+  border-bottom: 1px #4d4d4d solid;
   font-weight: bold;
   user-select: none;
   margin-right: 60px;
@@ -191,8 +194,8 @@ a {
 
 .greeting{
   width: 150px;
-  margin: 20px;
-  color: red;
+  margin: 30px 0px 0px 60px;
+  color: #e60000;
 }
 .greeting__link{
   text-decoration: underline;
@@ -207,12 +210,17 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 40px 20px 40px 60px;
+  margin: 0px 20px 40px 60px;
 }
 
 .card {
   width: calc((100% - 20px * 1) / 7);
-  padding-bottom: 50px;
+  margin-top: 40px;
+}
+
+.card-content{
+  height: 300px;
+  margin-bottom: 40px;
 }
 
 .card-picture{
@@ -235,44 +243,22 @@ a {
 
 .card__title {
   display: block;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   margin-top: 10px;
+  color: #332f2e;
 }
 .card__summary {
   font-size: 15px;
+  margin-top: 10px;
 }
 .sample-price {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
-  color: red;
-}
-
-
-/* top page */
-
-.top__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  text-align: center;
-  width: 100vw;
+  color: #e60000;
+  margin-top: 10px;
 
 }
-
-
-
-.top__body{
-  width: calc((100% - 0px * 1) / 3);
-  padding: 40px 40px 20px 40px;
-  margin-bottom: 35px;  
-}
-
-.top__body:hover{
-  color: black;
-  opacity: 0.8;
-  transition: 0.5s ;
-  }
 
 
 /* 詳細ページ */
@@ -289,20 +275,21 @@ a {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
+  margin-right: 60px;
 }
 .prototype__user{
   display: block;
   font-size: 16px;
-  color: black;
+  color: #332f2e;
   text-align: center;
   text-decoration: underline;
 }
 .sample__image{
-  width: 400px;
-  height: 400px;
+  width: 475px;
+  height: 665px;
   border:1px solid #aaa;
   position: absolute;
-  top: 150px;
+  top: 45px;
   left: 200px;
 }
 
@@ -314,29 +301,29 @@ a {
 
 .prototype__body{
   position: absolute;
-  right: 600px;
-  top: 150px;
-  padding-right: 32px;
+  top: 45px;
+  left: 800px;
 }
 
+
 .sample-explain-box {
-  font-size: 18px;
+  font-size: 15px;
   overflow-wrap: anywhere;
   position: absolute;
-  top: 700px; 
+  top: 750px; 
   margin: 20px 200px 0px 200px; 
-  padding-bottom: 10px;
+  padding-bottom: 30px;
   border-bottom: 1px solid #aaa;
 }
 
 .sample-detail-box {
-  font-size: 18px;
+  font-size: 15px;
   overflow-wrap: anywhere;
   position: absolute;
-  top: 960px;
+  top: 1000px;
   left: 200px;
   border-bottom: 1px solid #aaa;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 
 .info-value{
@@ -345,18 +332,19 @@ a {
 
 
 .detail-table {
+  color: #332f2e;
   margin-bottom: 30px;
   width: 65%;
   align-items: flex-end;
   position: absolute;
-  top: 1220px;
+  top: 1320px;
   margin: 0px 200px;
 }
 
 .detail-item {
   width: 20%;
-  background-color: #eee;
-  border: 1px solid #dedede;
+  background-color: #e6d2cf;
+  border: 1px solid #999;
   font-size: 14px;
   text-align: center;
 }
@@ -364,7 +352,7 @@ a {
 .detail-value {
   width: 80%;
   padding: 20px;
-  border: 1px solid #dedede;
+  border: 1px solid #999;
   font-size: 14px;
 }
 
@@ -372,17 +360,16 @@ a {
   font-size: 30px;
   padding-bottom: 20px;
   font-weight: bold;
-
 }
 
 .prototype__detail{
   display: flex;
   margin-bottom: 8px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
 }
 .detail__title{
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 40px;
 }
@@ -424,7 +411,7 @@ a {
 
 .comment_user{
   font-size: 16px;
-  color: #999;
+  color: #332f2e;
   text-decoration: underline;
 }
 
@@ -462,14 +449,16 @@ a {
 /* フッター */
 
 .footer {
-  background-color: white;
+  background-color: #e6d2cf;
   border-top: 1px solid black;
   padding-top: 50px;
+  color: #332f2e;
 }
 
 .nav__bottom{
   margin: 0px 200px 50px 180px;
 }
+
 
 .info-content{
   margin: 0px 200px 80px 200px;
@@ -493,9 +482,9 @@ a {
 
 .copyright {
   text-align: center;
-  color: black;
+  color: #332f2e;
   font-size: 10px;
-  border-top: 1px solid black;
+  border-top: 1px solid #332f2e;
   padding: 30px;
 }
 
@@ -510,10 +499,6 @@ a {
 .company__info__content{
   font-weight: bold;
 }
-
-
-
-
 
 
 /* タブレット対応 */

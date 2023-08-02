@@ -1,0 +1,22 @@
+databases:
+  - name: marushin_sample
+    databaseName: marushin_sample
+    user: kota95760184@gmail.com
+    region: japan
+
+services:
+  - type: web
+    name: marushin-sample
+    env: ruby
+    region: japan
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: postgres://marushin_sample_production_user:MvhamgmaKNPFB5XRHhrmFxYSqJm9mL1x@dpg-cgobdsou9tun42od3d2g-a/marushin_sample_production
+        fromDatabase:
+          name: marushin_sample
+          property: connectionString
+      - key: afd463f4eb54915da8b7992b325b62f6
+        sync: false
+

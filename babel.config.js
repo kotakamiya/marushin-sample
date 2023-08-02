@@ -1,4 +1,4 @@
-module.exports = function(api) {
+export default function(api) {
   var validEnv = ['development', 'test', 'production']
   var currentEnv = api.env()
   var isDevelopmentEnv = api.env('development')
@@ -56,7 +56,9 @@ module.exports = function(api) {
       [
         '@babel/plugin-transform-runtime',
         {
-          helpers: false
+          helpers: false,
+          regenerator: true,
+          corejs: false
         }
       ],
       [

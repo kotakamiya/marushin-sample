@@ -18,8 +18,7 @@ div {
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
   color: #3b4043;
-  background-color: #e6d2cf;
-
+  background-color: #FFFAFA;
 }
 
 
@@ -42,7 +41,7 @@ a {
 /* ヘッダー */
 
 .header {
-  background-color: #e6d2cf;
+  background-color: #FFFAFA;
   border-bottom: 1px #998c8a solid;
   padding: 20px 0px;
   color: #332f2e;
@@ -226,7 +225,7 @@ a {
 .card-picture{
   width: 160px;
   height: 200px;
-  border:1px solid #aaa;
+  border: 1px solid #aaa;
   overflow: hidden;
 }
 
@@ -252,12 +251,12 @@ a {
   font-size: 15px;
   margin-top: 10px;
 }
+
 .sample-price {
   font-size: 15px;
   font-weight: bold;
   color: #e60000;
   margin-top: 10px;
-
 }
 
 
@@ -343,7 +342,7 @@ a {
 
 .detail-item {
   width: 20%;
-  background-color: #e6d2cf;
+  background-color: #FFFAFA;
   border: 1px solid #999;
   font-size: 14px;
   text-align: center;
@@ -387,15 +386,34 @@ a {
   border: 1px #999 solid;
   border-radius: 3px;
   transition: 0.4s ease;
-  margin: 0px 0px 0px 200px;
+  margin: 55px 0px 0px 950px;
 }
 .prototype__btn:hover{
   color: #fff;
   background: #999;
 }
 
+.prototype__btn2:hover{
+  color: #fff;
+  background: #999;
+}
+
+.prototype__btn2{
+  display: block;
+  padding: 20px;
+  font-size: 0.4em;
+  color: #999;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #999 solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin: 55px 0px 0px 20px;
+}
+
+
 .prototype__comments{
-  background-color: #f6f6f6;
+  background-color: #FFFAFA;
   padding: 20px;
   margin: 28px 0 40px 0;
 }
@@ -449,22 +467,30 @@ a {
 /* フッター */
 
 .footer {
-  background-color: #e6d2cf;
+  background-color: #FFFAFA;
   border-top: 1px solid black;
   padding-top: 50px;
   color: #332f2e;
+}
+
+.info-content{
+  display: flex;
+}
+
+.info-content{
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 200px 80px 200px;
+
 }
 
 .nav__bottom{
   margin: 0px 200px 50px 180px;
 }
 
-
-.info-content{
-  margin: 0px 200px 80px 200px;
-  display: flex;
-  justify-content: space-between;
+.nav__address{
 }
+
 
 .occupation{
   padding-top: 20px;
@@ -473,6 +499,7 @@ a {
 
 .info{
   margin-top: 20px;
+
 }
 
 .area__text{
